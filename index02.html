@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg1{
+            background-color: burlywood;
+        }
+        .bg2{
+            background-color:coral;
+        }
+        .bg3{
+            background-color:cornflowerblue;
+        }
+        .fixed{
+            width: 80px;
+            height: 80px;
+            position: fixed;
+            right: 20px;
+            bottom: 40px;
+            cursor: pointer;
+            background-color: darkcyan;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            display: none;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <section class="bg1">
+        <img src="assets/images/bg1.jpeg" alt="">
+    </section>
+    <section class="bg1">
+        <img src="assets/images/mainbg.jpeg" alt="">
+    </section>
+    <section class="bg1">
+        <img src="assets/images/marshallmainimg01.jpeg" alt="">
+    </section>
+
+    <div class="fixed">
+        <span>top</span>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+     $(window).scroll(function(){
+         if($(this).scrollTop()>800){
+             $('.fixed').css('display','flex').fadeIn();
+         }else{
+             $('.fixed').fadeOut(200);
+         }
+     });
+
+     $('.fixed').click(function(e){
+         e.preventDefault();
+         $('html,body').animate({
+             scrollTop:0
+         },300)
+     })
+
+    </script>
+    
+</body>
+</html>

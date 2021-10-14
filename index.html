@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        div{
+            color: blue;
+        }
+        p{
+            color:brown;
+        }
+        span{
+            color: chocolate;
+            display: none;
+        }
+        section{
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div>Try scrolling the iframe.</div>
+    <p>Paragraph - <span>Scroll heppened!</span></p>
+    <section></section>
+    <section></section>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+     $("p").clone().appendTo(document.body);
+     $("p").clone().appendTo(document.body);
+     $("p").clone().appendTo(document.body);
+
+     $(window).scroll(function(){
+         $("spen").css("display","inline").fadeOut();
+     });  
+    </script>
+    
+</body>
+</html>

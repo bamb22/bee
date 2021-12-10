@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="button" value="시작" onclick="startClock();">
+    <input type="button" value="중지" onclick="StopClock()">
+
+    <script>
+
+        function PrintTime(){
+            let today=new Date();
+            let hh=today.getHours();
+            let mm=today.getMinutes();
+            let ss=today.getSeconds();
+            document.querySelector('#result').innerHTMLahh+":"+mm+": "+ss;
+        }
+            let timerId=null;
+            function startClock(){
+                PrintTime();
+                timerId=setInterval(PrintTime,1000);
+            }
+
+            function StopClock(){
+                if(timerId != null){
+                    clearInterval(timerId);
+                }
+            }
+
+    </script>
+</body>
+</html>

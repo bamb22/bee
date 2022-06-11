@@ -445,6 +445,7 @@ nav{
 
  .size{
      width: 50%;
+     padding: 30px 0px 30px 0px;
    }
    
    
@@ -471,7 +472,7 @@ nav{
    
    .products{
     position: relative;
-    top: 100px;
+    top: 60px;
     width: 80%;
     margin: 0 auto;
    }
@@ -1296,6 +1297,10 @@ nav{
         padding: 0px 0px 0px 70px;
     }
 
+    .pt{
+        justify-content: center;
+    }
+
 
        .img01{
            padding: 20px;
@@ -1338,6 +1343,7 @@ nav{
     
       .size{
           width: 100%;
+          padding: 0;
       }
 
       /* -------- */
@@ -1385,7 +1391,6 @@ nav{
 
     .size{
         padding-bottom: 30px;
-        justify-content: center;
     }
 
     .mobile-bg{
